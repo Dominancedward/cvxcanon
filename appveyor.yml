@@ -39,7 +39,8 @@ for:
      - export PATH=/home/appveyor/miniconda/bin:$PATH
      - conda update --yes conda
      - deps="nomkl pip numpy scipy"
-     - conda create -p $HOME/py --yes $deps "python=%PYTHON_VERSION%"
+     - "conda create -q -n test-environment python=%PYTHON_VERSION% numpy scipy nose" 
+     - activate test-environment
      - export PATH=$HOME/py/bin:$PATH
      - sudo apt-get install -qq libatlas-base-dev gfortran
      - export ATLAS="/usr/lib/atlas-base/libatlas.so"
