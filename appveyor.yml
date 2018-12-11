@@ -1,13 +1,12 @@
 build: false
 
+image:
+  - Ubuntu
 
 environment:
   matrix:
     - PYTHON_VERSION: 2.7
       MINICONDA: C:\Miniconda
-  
-  os:
-    - linux
 
 init:
   - "ECHO %PYTHON_VERSION% %MINICONDA%"
