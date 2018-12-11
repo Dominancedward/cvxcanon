@@ -23,7 +23,8 @@ install:
   - cd tests
   - git clone https://github.com/cvxgrp/cvxpy.git
   - cd cvxpy
-
+  - python setup.py install
+  - pip install nose
 
 test_script:
   - nosetests cvxpy
