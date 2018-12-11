@@ -5,7 +5,9 @@ environment:
   matrix:
     - PYTHON_VERSION: 2.7
       MINICONDA: C:\Miniconda
-      operating system: linux
+  
+  os:
+    - linux
 
 init:
   - "ECHO %PYTHON_VERSION% %MINICONDA%"
