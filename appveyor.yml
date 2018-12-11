@@ -1,13 +1,11 @@
 build: false
 
-os: 
-  - linux
-  - windows
 
 environment:
   matrix:
     - PYTHON_VERSION: 2.7
       MINICONDA: C:\Miniconda
+      operating system: linux
 
 init:
   - "ECHO %PYTHON_VERSION% %MINICONDA%"
