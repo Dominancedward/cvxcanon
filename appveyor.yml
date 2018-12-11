@@ -2,6 +2,7 @@ build: false
 
 image:
   - Visual Studio 2015
+  - Ubuntu
 
 environment:
   matrix:
@@ -23,7 +24,6 @@ install:
   - git clone https://github.com/cvxgrp/cvxpy.git
   - cd cvxpy
   - python setup.py install
-  - pip install nose
 
 test_script:
   - nosetests cvxpy
