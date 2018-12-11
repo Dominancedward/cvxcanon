@@ -7,8 +7,8 @@ image:
 
 environment:
   matrix:
-    - PYTHON_VERSION: 3.4
-      MINICONDA: C:\Miniconda3
+    - PYTHON_VERSION: 2.7
+      MINICONDA: C:\Miniconda
 for:
 -
   matrix:
@@ -39,8 +39,7 @@ for:
      - export PATH=/home/appveyor/miniconda/bin:$PATH
      - conda update --yes conda
      - deps="nomkl pip numpy scipy"
-     - "conda create -q -n test-environment python=%PYTHON_VERSION% numpy scipy nose" 
-     - activate test-environment
+     - conda create -p $HOME/py --yes $deps python=2.7
      - export PATH=$HOME/py/bin:$PATH
      - sudo apt-get install -qq libatlas-base-dev gfortran
      - export ATLAS="/usr/lib/atlas-base/libatlas.so"
